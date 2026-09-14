@@ -3,6 +3,12 @@
 /* Connect to Databricks, analyze data, export results                  */
 /************************************************************************/
 
+
+%let dbrix_token=%sysget(DBRIXTOKEN);
+
+%put TOKEN FOUND=%eval(%length(&dbrix_token)>0);
+
+
 /*Connect to Databricks*/
 
 libname dbricks odbc
